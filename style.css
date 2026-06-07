@@ -1,0 +1,250 @@
+@import url(https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap);
+
+@keyframes balancar {
+
+    0% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    100% { transform: rotate(-5deg); }
+    
+}
+
+    :root{
+
+        --background-color: #e5ffe0 ;
+        --text: #863a4e;
+        --textsecondary: #ffffff ;
+        --accent: #a5ff8b;
+        --accent-dark: #883727;
+        --accent-light: #f3729f;
+        --accent-lighter: #ffd1e9;
+
+    }
+
+    body{
+        
+        font-family: "Nunito", sans-serif;
+        color: var(--text);
+        background:
+            linear-gradient(#ffffff51, #ffffff51),
+            url("pawel-czerwinski-Bz_JX1COlrE-unsplash.jpg");
+        background-size: cover;
+        background-position: center;
+
+    }
+
+    .container{
+
+        max-width: 1000px;
+        margin: 70px auto;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 420px minmax(3, 1fr);
+
+}
+
+header{
+
+    font-family: "Gochi Hand", cursive;
+    color: var(--textsecondary);
+    border: #ffd1e9 2px solid;
+    border-radius: 5px;
+    grid-row: 1/2;
+    grid-column: 1/3;
+    text-align: center;
+    font-size: 60px;
+    background-color: var(--accent-lighter);
+    box-shadow:
+        0 0 10px var(--accent-light),
+        0 0 20px var(--accent-lighter);
+
+}
+
+    nav{
+
+    border: #ffd1e9 2px solid;
+    border-radius: 5px;
+    grid-row: 2/3;
+    grid-column: 1/2;
+    height: max-content;
+    font-size: 20px;
+    background-color: var(--accent-lighter);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-shadow:
+        0 0 10px var(--accent-light),
+        0 0 20px var(--accent-lighter);
+}
+
+    .fotos {
+    grid-column: 1/2;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+    .photo,
+    .foto {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 90px;
+    margin-top: 10px;
+    animation: balancar 2s ease-in-out infinite;
+    box-shadow:
+        0 0 10px var(--accent-light),
+        0 0 20px var(--accent-lighter);
+}
+
+
+
+    main{
+
+    border: #ffd1e9 2px solid;
+    border-radius: 5px;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    height: max-content;
+    font-size: 17px;
+    background-color: var(--accent-lighter);
+    box-shadow:
+        0 0 10px var(--accent-light),
+        0 0 20px var(--accent-lighter);
+}
+
+    footer{
+
+    border: #ffd1e9 2px solid;
+    border-radius: 5px;
+    grid-row: 3/4;
+    grid-column: 1/3;
+    background-color: var(--accent-lighter);
+    text-align: center;
+    box-shadow:
+        0 0 10px var(--accent-light),
+        0 0 20px var(--accent-lighter);
+
+}
+
+    .imagem {
+
+    transition: transform 0.3s ease;
+
+}
+
+    .imagem:hover {
+
+    transform: scale(1.1);
+
+}
+
+.laco {
+
+    width: 70px;
+    position: relative;
+    top: 10px;
+
+}
+
+
+.chuva-coracoes {
+
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+
+}
+
+.chuva-coracoes span {
+
+    position: absolute;
+    bottom: -50px;
+    font-size: 30px;
+    animation: subir 8s linear infinite;
+
+}
+
+.chuva-coracoes span:nth-child(1) {
+
+    left: 5%;
+    animation-duration: 6s;
+
+}
+
+.chuva-coracoes span:nth-child(2) {
+
+    left: 20%;
+    animation-duration: 8s;
+
+}
+
+.chuva-coracoes span:nth-child(3) {
+
+    left: 35%;
+    animation-duration: 7s;
+
+}
+
+.chuva-coracoes span:nth-child(4) {
+
+    left: 50%;
+    animation-duration: 9s;
+
+}
+
+.chuva-coracoes span:nth-child(5) {
+
+    left: 65%;
+    animation-duration: 6.5s;
+
+}
+
+.chuva-coracoes span:nth-child(6) {
+
+    left: 80%;
+    animation-duration: 8.5s;
+
+}
+
+.chuva-coracoes span:nth-child(7) {
+
+    left: 90%;
+    animation-duration: 7.5s;
+
+}
+
+.chuva-coracoes span:nth-child(8) {
+
+    left: 75%;
+    animation-duration: 10s;
+
+}
+
+@keyframes subir {
+
+    0% {
+
+        transform: translateY(0) scale(0.8);
+        opacity: 0;
+
+    }
+
+    20% {
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform: translateY(-110vh) scale(1.3);
+        opacity: 0;
+
+    }
+
+}
